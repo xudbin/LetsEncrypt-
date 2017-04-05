@@ -41,6 +41,31 @@ chmod a+x certbot-auto
  /usr/local/apache/conf/extra/httpd-vhosts.conf
  
  
+ #升级python 2.7  
  
+ yum groupinstall "Development tools"
+ 
+ 
+ yum install zlib-devel bzip2-devel openssl-devel ncurses-devel
+ 
+ 
+cd /opt
+wget https://www.python.org/ftp/python/2.7.13/Python-2.7.13.tgz
+tar xf Python-2.7.13.tgz
+cd Python-2.7.13
+./configure
+make install
+
+#配置默认连接
+#cd /usr/local/bin
+#ls -ltr python*
+#ln -s /usr/local/bin/python2.7 /usr/local/bin/python
+
+添加letsencrypt 自动续期
+
+
+
+./certbot-auto renew 
+echo "0 0 2 * * root /root/renew.sh >/dev/null 2>&1  "
  
  

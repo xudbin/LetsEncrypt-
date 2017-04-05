@@ -2,6 +2,10 @@
 
 #程序默认安装目录：
 
+#centos 6 64位 首先安装 epel
+sudo yum install epel-release
+
+
 Apache：/usr/local/apache
 PHP：/usr/local/php
 MySQL：/usr/local/mysql

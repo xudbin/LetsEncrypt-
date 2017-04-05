@@ -16,4 +16,15 @@ chmod a+x certbot-auto
 
 # 链接到 默认变量
 
- ln -s /usr/local/apache/bin/* /usr/local/bin/
+# ln -s /usr/local/apache/bin/* /usr/local/bin/
+ 
+ #添加 apachectl 默认变量路径
+ 
+ export PATH=/usr/local/apache/bin:$PATH
+ 
+ echo $PATH 
+ 
+ 
+ ./certbot-auto --help apache  #查看帮助
+ ./certbot-auto --apache-server-root /usr/local/apache
+ 

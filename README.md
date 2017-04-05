@@ -18,7 +18,7 @@ chmod a+x certbot-auto
 
 # ln -s /usr/local/apache/bin/* /usr/local/bin/
  
- #添加 apachectl 默认变量路径
+ #添加 apachectl 默认变量路径，终端关闭后消失
  
  export PATH=/usr/local/apache/bin:$PATH
  

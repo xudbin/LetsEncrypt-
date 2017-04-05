@@ -66,7 +66,7 @@ make install
 
 
 
-./certbot-auto renew 
+./certbot-auto renew
 echo "0 0 2 * * root /root/renew.sh >/dev/null 2>&1  "
  
  
